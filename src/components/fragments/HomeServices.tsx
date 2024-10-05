@@ -28,7 +28,7 @@ const HomeServices = () => {
   return (
     <div className="px-2 py-16 lg:px-32 lg:py-24 bg-gray-100">
       <div className="mb-12">
-        <p className="text-center text-4xl font-bold text-gray-800">Our Packages</p>
+        <p className="text-center text-4xl font-bold text-gray-800">Our Services</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {cardContent.map((card) => (
