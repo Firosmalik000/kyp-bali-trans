@@ -26,13 +26,18 @@ const HomeServices = () => {
   ];
 
   return (
-    <section className="w-full py-16 bg-gray-50 px-14 md:px-[100px]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+    <div className="px-2 py-16 lg:px-32 lg:py-24 bg-gray-100">
+      <div className="mb-12">
+        <p className="text-center text-4xl font-bold text-gray-800">Our Packages</p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {cardContent.map((card) => (
-          <CardHome key={card.id} title={card.title} description={card.description} icon={card.icon} />
+          <div key={card.id} className="mx-auto">
+            <CardHome title={card.title} description={card.description} icon={card.icon} />
+          </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

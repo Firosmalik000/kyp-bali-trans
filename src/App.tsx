@@ -24,7 +24,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/package" element={<Packages />} />
-        <Route path="/package/:packageId" element={<PackageDetail />} />
+        <Route path="/package/:id" element={<PackageDetail />} />
       </Routes>
       <WaButton />
       <Contact />

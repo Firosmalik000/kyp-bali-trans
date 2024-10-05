@@ -1,97 +1,38 @@
 import { Link } from 'react-router-dom';
 import Pa from '../../img/kyp/hero1.jpg';
-import { useLanguage } from '../../hooks/UseLanguage';
+import Pa2 from '../../img/kyp/hero5.jpg';
 
 const HomePackage = () => {
-  const { language } = useLanguage();
-
-  const content = {
-    en: {
-      packageTitle: 'Our Package',
-      packages: [
-        {
-          id: 'traditional',
-
-          price: 'IDR 500.000/person',
-          imageSrc: Pa,
-          imageAlt: 'Dolphin Tour',
-          name: 'Dolphin Tour',
-        },
-      ],
-      showDetail: 'Show Detail',
+  const packages = [
+    {
+      id: 1,
+      name: 'Dolphin Tours',
+      imageSrc: Pa,
+      imageAlt: 'Lovina Dolphin Tours',
+      url: '/package/1',
     },
-    zh: {
-      packageTitle: '我们的套餐',
-      packages: [
-        {
-          id: 'traditional',
-
-          price: 'IDR 500.000/人',
-          imageSrc: Pa,
-          imageAlt: '传统银饰课程',
-          name: 'Dolphin Tour',
-        },
-      ],
-      showDetail: '显示详情',
+    {
+      id: 2,
+      name: 'Bali Tours and Destination',
+      imageSrc: Pa2,
+      imageAlt: 'Bali tours and destination',
+      url: '/package/2',
     },
-    id: {
-      packageTitle: 'Paket Kami',
-      packages: [
-        {
-          id: 'traditional',
-
-          price: 'IDR 500.000/orang',
-          imageSrc: Pa,
-          imageAlt: 'Kelas Perak Tradisional',
-          name: 'Dolphin Tour',
-        },
-      ],
-      showDetail: 'Lihat Detail',
-    },
-    jp: {
-      packageTitle: 'パッケージ',
-      packages: [
-        {
-          id: 'traditional',
-
-          price: 'IDR 500.000/人',
-          imageSrc: Pa,
-          imageAlt: '伝統的な銀細工クラス',
-          name: 'Dolphin Tour',
-        },
-      ],
-      showDetail: '詳細を見る',
-    },
-    ko: {
-      packageTitle: '우리의 패키지',
-      packages: [
-        {
-          id: 'traditional',
-
-          price: 'IDR 500.000/인당',
-          imageSrc: Pa,
-          imageAlt: '전통 실버 클래스',
-          name: 'Dolphin Tour',
-        },
-      ],
-      showDetail: '세부 사항 보기',
-    },
-  };
+  ];
 
   return (
     <div className="px-8 py-16 lg:px-32 lg:py-24 bg-gray-100">
       <div className="mb-12">
-        <p className="text-center text-4xl font-bold text-gray-800">{content[language].packageTitle}</p>
+        <p className="text-center text-4xl font-bold text-gray-800">Our Packages</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {content[language].packages.map((pkg, index) => (
-          <div key={index} className="h-[350px] w-full border rounded-lg shadow-md overflow-hidden bg-white transform hover:scale-105 transition-transform duration-300">
-            <img src={pkg.imageSrc} alt={pkg.imageAlt} className="h-[230px] w-full object-cover " />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {packages.map((pkg) => (
+          <div key={pkg.id} className="h-[320px] w-full border rounded-lg shadow-md overflow-hidden bg-white transform hover:scale-105 transition-transform duration-300">
+            <img src={pkg.imageSrc} alt={pkg.imageAlt} className="h-[230px] w-full object-cover" />
             <div className="flex flex-col gap-2 px-4 py-2 border-t">
               <p className="text-center font-semibold text-lg text-gray-700">{pkg.name}</p>
-              <p className="text-center text-sm text-gray-600">{pkg.price}</p>
               <Link to={`/package/${pkg.id}`}>
-                <p className="text-center font-bold text-blue-500 hover:underline">{content[language].showDetail}</p>
+                <p className="text-center font-bold text-blue-500 hover:underline">Show Detail</p>
               </Link>
             </div>
           </div>
