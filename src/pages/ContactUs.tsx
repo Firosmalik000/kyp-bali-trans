@@ -1,4 +1,4 @@
-import { FaPhoneAlt, FaEnvelope, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaInstagram } from 'react-icons/fa';
 import { useLanguage } from '../hooks/UseLanguage';
 
 const ContactUs = () => {
@@ -48,20 +48,16 @@ const ContactUs = () => {
         <div className="flex flex-col gap-4 w-full max-w-md px-6 ">
           <div className="flex items-center text-lg font-medium justify-center md:justify-start">
             <FaPhoneAlt className="text-gray-700 mr-2" />
-            <p className="text-gray-700">+62 838-3205-0948</p>
+            <p className="text-gray-700">+62-823-4033-2580</p>
           </div>
           <div className="flex items-center text-lg font-medium justify-center md:justify-start">
             <FaEnvelope className="text-gray-700 mr-2" />
-            <p className="text-gray-700">srirahayusilverjewelry@gmail.com</p>
+            <p className="text-gray-700">kypbalitrans@gmail.com</p>
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex items-center text-lg font-medium justify-center md:justify-start">
               <FaInstagram className="text-gray-700 mr-2" />
-              <p className="text-gray-700">@srirahayusilver</p>
-            </div>
-            <div className="flex items-center text-lg font-medium justify-center md:justify-start">
-              <FaFacebookF className="text-gray-700 mr-2" />
-              <p className="text-gray-700">srirahayusilver</p>
+              <p className="text-gray-700">@kyp.bali_trans</p>
             </div>
           </div>
         </div>
@@ -70,7 +66,7 @@ const ContactUs = () => {
       {/* Map Section */}
       <div className="mt-10 px-4 md:px-20 lg:px-40 xl:px-60 rounded-xl mb-6">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.341523280116!2d115.23981849999998!3d-8.4661314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd222e084668957%3A0xf413379de640c8b9!2sSri%20Rahayu%20Silver%20(Silver%20Class%20and%20Jewerly)!5e0!3m2!1sen!2sid!4v1727090472401!5m2!1sen!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.4142301991196!2d115.02318095000001!3d-8.1609538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd19b40a35dbf07%3A0x7500ee0f7e30527c!2sLovina%20Beach!5e0!3m2!1sen!2sid!4v1728152939307!5m2!1sen!2sid"
           width="100%"
           height="600"
           style={{ border: 0 }}

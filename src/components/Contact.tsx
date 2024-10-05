@@ -50,7 +50,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full py-5 px-8 md:px-[100px] flex flex-col md:flex-row bg-white justify-between gap-x-5">
+    <section id="contact" className="w-full py-5 px-8 md:px-[100px] flex flex-col md:flex-row bg-gray-100 justify-between gap-x-5">
       <div className="w-full md:w-1/2">
         {/* penutup */}
         <div className="py-8 border-b-2 my-5">
