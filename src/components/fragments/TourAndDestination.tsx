@@ -1,98 +1,64 @@
-import one from '../../img/kyp/gal1.jpg';
-import two from '../../img/kyp/hero5.jpg';
-import three from '../../img/kyp/tour3.jpg';
-import four from '../../img/kyp/tour4.jpg';
-import five from '../../img/kyp/gal7.jpg';
-import six from '../../img/kyp/tour6.jpg';
-import seven from '../../img/kyp/tour7.jpg';
-import eight from '../../img/kyp/about.jpg';
-import nine from '../../img/kyp/tour9.jpg';
+import { Link } from 'react-router-dom';
+import Pa from '../../img/kyp/hero1.jpg';
+import Pa2 from '../../img/kyp/hero5.jpg';
+import { useLanguage } from '../../hooks/UseLanguage';
 
-const TourAndDestination = () => {
-  const HomePackage = () => {
-    const packages = [
-      {
-        id: 1,
-        name: 'Banjar Hot Spring',
-        imageSrc: one,
-        imageAlt: 'Banjar Hot Spring',
-      },
-      {
-        id: 2,
-        name: 'Handara Iconic Gate',
-        imageSrc: two,
-        imageAlt: 'Handara Iconic Gate',
-      },
-      {
-        id: 3,
-        name: 'Ulundanu Beratan Tample',
-        imageSrc: three,
-        imageAlt: 'Snorkeling in Bali',
-      },
-      {
-        id: 4,
-        name: 'Buddhist Temple',
-        imageSrc: four,
-        imageAlt: 'Buddhist Temple',
-      },
-      {
-        id: 5,
-        name: 'Beji Temple',
-        imageSrc: five,
-        imageAlt: 'Beji Temple',
-      },
-      {
-        id: 6,
-        name: 'Maduwe Karang Temple',
-        imageSrc: six,
-        imageAlt: 'Maduwe Karang Temple',
-      },
-      {
-        id: 7,
-        name: 'Munduk Tutub Waterfall',
-        imageSrc: seven,
-        imageAlt: 'Munduk Tutub Waterfall',
-      },
-      {
-        id: 8,
-        name: 'Tamblingan Junggle Buggy',
-        imageSrc: eight,
-        imageAlt: 'Tamblingan Junggle Buggy',
-      },
-      {
-        id: 9,
-        name: 'Tamblingan Trekking and Canoe',
-        imageSrc: nine,
-        imageAlt: 'Tamblingan Trekking and Canoe',
-      },
-    ];
+const HomePackage = () => {
+  const language = useLanguage(); // Pastikan untuk mendapatkan bahasa yang aktif
 
-    return (
-      <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {packages.map((pkg) => (
-            <div key={pkg.id} className="h-[320px] w-full border rounded-lg shadow-md overflow-hidden bg-white transform hover:scale-105 transition-transform duration-300">
-              <img src={pkg.imageSrc} alt={pkg.imageAlt} className="h-[230px] w-full object-cover" />
-              <div className="flex flex-col gap-2 px-4 py-2 border-t">
-                <p className="text-center font-semibold text-lg text-gray-700">{pkg.name}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
+  const packages = [
+    {
+      id: 1,
+      name: {
+        en: 'Dolphin Tours',
+        id: 'Tur Lumba-lumba',
+        zh: '海豚之旅',
+      },
+      imageSrc: Pa,
+      imageAlt: {
+        en: 'Lovina Dolphin Tours',
+        id: 'Tur Lumba-lumba Lovina',
+        zh: '洛维纳海豚之旅',
+      },
+      url: '/package/1',
+    },
+    {
+      id: 2,
+      name: {
+        en: 'Bali Tours and Destination',
+        id: 'Tur dan Destinasi Bali',
+        zh: '巴厘岛旅游和目的地',
+      },
+      imageSrc: Pa2,
+      imageAlt: {
+        en: 'Bali tours and destination',
+        id: 'Tur dan destinasi Bali',
+        zh: '巴厘岛旅游和目的地',
+      },
+      url: '/package/2',
+    },
+  ];
 
   return (
-    <section id="jewelry" className="w-full py-16 bg-gray-50 px-6 md:px-[100px]">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 font-sans">Tour And Destination</h1>
+    <div className="px-8 py-16 lg:px-32 lg:py-24 bg-gray-100">
+      <div className="mb-12">
+        <p className="text-center text-4xl font-bold text-gray-800">Our Packages</p>
       </div>
-      <div>
-        <HomePackage />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {packages.map((pkg) => (
+          <div key={pkg.id} className="h-[320px] w-full border rounded-lg shadow-md overflow-hidden bg-white transform hover:scale-105 transition-transform duration-300">
+            <img src={pkg.imageSrc} alt={pkg.imageAlt[language]} className="h-[230px] w-full object-cover" />
+            <div className="flex flex-col gap-2 px-4 py-2 border-t">
+              <p className="text-center font-semibold text-lg text-gray-700">{pkg.name[language]}</p>
+              <Link to={`/package/${pkg.id}`}>
+                <p className="text-center font-bold text-blue-500 hover:underline">Show Detail</p>
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default TourAndDestination;
+export default HomePackage;

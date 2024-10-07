@@ -27,6 +27,7 @@ interface PackageDetails {
     [id: string]: PackageDetail;
   };
 }
+
 const PackageDetail = () => {
   const { language } = useLanguage();
   const { id } = useParams<{ id: string }>(); // Extracting id from URL
@@ -42,7 +43,7 @@ const PackageDetail = () => {
         ],
         privat: [
           { package: 'Dolphin Only', price: 'Rp. 800.000/person' },
-          { package: 'Dolphin + Swing', price: 'Rp. 1000.000/person' },
+          { package: 'Dolphin + Swing', price: 'Rp. 1.000.000/person' },
           { package: 'Dolphin + Snorkeling + Swing', price: 'Rp. 1.200.000/person' },
         ],
         images: [Pa1, Pa2, Pa3],
@@ -50,6 +51,52 @@ const PackageDetail = () => {
 
       2: {
         title: 'Bali Tour & Destination',
+        regular: [],
+        privat: [],
+        images: [],
+      },
+    },
+    id: {
+      1: {
+        title: 'Tur Lumba-Lumba',
+        regular: [
+          { package: 'Lumba-Lumba Saja', price: 'Rp. 150.000/orang' },
+          { package: 'Lumba-Lumba + Ayunan', price: 'Rp. 250.000/orang' },
+          { package: 'Lumba-Lumba + Ayunan + Snorkeling', price: 'Rp. 350.000/orang' },
+        ],
+        privat: [
+          { package: 'Lumba-Lumba Saja', price: 'Rp. 800.000/orang' },
+          { package: 'Lumba-Lumba + Ayunan', price: 'Rp. 1.000.000/orang' },
+          { package: 'Lumba-Lumba + Snorkeling + Ayunan', price: 'Rp. 1.200.000/orang' },
+        ],
+        images: [Pa1, Pa2, Pa3],
+      },
+
+      2: {
+        title: 'Tur & Destinasi Bali',
+        regular: [],
+        privat: [],
+        images: [],
+      },
+    },
+    zh: {
+      1: {
+        title: '海豚之旅',
+        regular: [
+          { package: '仅海豚', price: 'Rp. 150.000/人' },
+          { package: '海豚 + 秋千', price: 'Rp. 250.000/人' },
+          { package: '海豚 + 秋千 + 浮潜', price: 'Rp. 350.000/人' },
+        ],
+        privat: [
+          { package: '仅海豚', price: 'Rp. 800.000/人' },
+          { package: '海豚 + 秋千', price: 'Rp. 1.000.000/人' },
+          { package: '海豚 + 浮潜 + 秋千', price: 'Rp. 1.200.000/人' },
+        ],
+        images: [Pa1, Pa2, Pa3],
+      },
+
+      2: {
+        title: '巴厘岛之旅与目的地',
         regular: [],
         privat: [],
         images: [],

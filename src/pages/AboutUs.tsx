@@ -10,25 +10,14 @@ const AboutUs = () => {
       description:
         'KYP BALI TRANS is a transportation service based in North Bali, specifically in Lovina. We offer a variety of services, including North Bali tours, hotel transfers, and dolphin tours. Enjoy the comfort of your journey and vacation in North Bali with us.',
     },
-    zh: {
-      title: '关于我们',
-      description:
-        'Sri Rahayu Silver (银类和珠宝) 提供传统和独特的体验。通过在我们的当地银匠课程中花费几个小时，您将深入了解传统银制作，将原材料转变为美丽的珠宝。我们珠宝的每一个元素都是手工制作的，使用传统技术。我们还设有一个展示我们许多手工产品的展厅。',
-    },
     id: {
       title: 'Tentang Kami',
       description:
-        'KYP BALI TRANS is a transportation service based in North Bali, specifically in Lovina. We offer a variety of services, including North Bali tours, hotel transfers, and dolphin tours. Enjoy the comfort of your journey and vacation in North Bali with us.',
+        'KYP BALI TRANS adalah layanan transportasi yang berbasis di Bali Utara, khususnya di Lovina. Kami menawarkan berbagai layanan, termasuk tur Bali Utara, transfer hotel, dan tur lumba-lumba. Nikmati kenyamanan perjalanan dan liburan Anda di Bali Utara bersama kami.',
     },
-    jp: {
-      title: '私たちについて',
-      description:
-        'Sri Rahayu Silver（シルバークラスとジュエリー）は、伝統的でユニークな体験を提供します。地元の銀細工教室で数時間を過ごすことで、伝統的な銀細工の素晴らしい洞察を得て、原材料を美しいジュエリーに変えることができます。私たちのジュエリーのすべての要素は手作業で作られており、伝統的な技術を使用しています。また、手作りの製品を多数展示するショールームもあります。',
-    },
-    ko: {
-      title: '회사 소개',
-      description:
-        'Sri Rahayu Silver(실버 클래스 및 보석)는 전통적이고 독특한 경험을 제공합니다. 지역 은세공 수업에서 몇 시간을 보내면 전통 은 세공에 대한 훌륭한 통찰력을 얻고 원자재를 아름다운 보석으로 변환할 수 있습니다. 우리의 모든 보석 요소는 손으로 제작되며 전통적인 기술을 사용합니다. 또한 많은 수제 제품을 전시하는 쇼룸도 있습니다.',
+    zh: {
+      title: '关于我们',
+      description: 'KYP BALI TRANS 是一家位于巴厘岛北部，特别是在洛维纳的运输服务公司。我们提供各种服务，包括北巴厘岛旅行、酒店接送服务和海豚旅行。与我们一起享受北巴厘岛的舒适旅程和假期。',
     },
   };
 
@@ -39,7 +28,7 @@ const AboutUs = () => {
         <p className="text-gray-700 text-justify">{content[language].description}</p>
       </div>
       <div className="flex justify-center">
-        <img src={AboutJpg} className="w-[500px] rounded-lg shadow-lg" alt="About Sri Rahayu Silver" />
+        <img src={AboutJpg} className="w-[500px] rounded-lg shadow-lg" alt="About KYP Bali Trans" />
       </div>
     </div>
   );

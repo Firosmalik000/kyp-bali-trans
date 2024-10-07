@@ -7,8 +7,6 @@ const Footer = () => {
     en: '© 2024 All rights reserved.',
     zh: '© 2024 保留所有权利。',
     id: '© 2024 Hak cipta dilindungi.',
-    jp: '© 2024 すべての権利を保有。',
-    ko: '© 2024 모든 권리 보유.',
   };
 
   return (

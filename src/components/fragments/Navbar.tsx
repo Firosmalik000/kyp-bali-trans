@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-
 import { FaTimes } from 'react-icons/fa';
 import { IoMenuSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../hooks/UseLanguage';
 
-type LanguageType = 'en' | 'id' | 'zh' | 'jp' | 'ko';
+// Hanya tiga pilihan bahasa: English (en), Chinese (zh), dan Indonesian (id)
+type LanguageType = 'en' | 'id' | 'zh';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,6 +21,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Teks untuk tiga bahasa yang diizinkan
   const texts = {
     en: {
       home: 'Home',
@@ -43,20 +44,6 @@ const Navbar = () => {
       gallery: '画廊',
       contact_us: '联系我们',
     },
-    jp: {
-      home: 'ホーム',
-      about_us: '私たちについて',
-      package: 'パッケージ',
-      gallery: 'ギャラリー',
-      contact_us: 'お問い合わせ',
-    },
-    ko: {
-      home: '홈',
-      about_us: '소개',
-      package: '패키지',
-      gallery: '갤러리',
-      contact_us: '연락처',
-    },
   };
 
   const classOptionNav = 'cursor-pointer font-semibold';
@@ -74,8 +61,6 @@ const Navbar = () => {
               <option value="en">English</option>
               <option value="id">Indonesia</option>
               <option value="zh">中文</option>
-              <option value="jp">日本語</option>
-              <option value="ko">한국어</option>
             </select>
           </div>
           <Link to="/">
@@ -100,8 +85,6 @@ const Navbar = () => {
             <option value="en">English</option>
             <option value="id">Indonesia</option>
             <option value="zh">中文</option>
-            <option value="jp">日本語</option>
-            <option value="ko">한국어</option>
           </select>
         </div>
 

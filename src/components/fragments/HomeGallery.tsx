@@ -1,6 +1,6 @@
 import one from '../../img/kyp/gal1.jpg';
 import two from '../../img/kyp/gal2.jpg';
-import three from '../../img//kyp/gal3.jpg';
+import three from '../../img/kyp/gal3.jpg';
 import four from '../../img/kyp/gal4.jpg';
 import five from '../../img/kyp/gal5.jpg';
 import six from '../../img/kyp/gal6.jpg';
@@ -17,17 +17,11 @@ const HomeGallery = () => {
     en: {
       jewelryTitle: 'Our Trip Gallery',
     },
-    zh: {
-      jewelryTitle: '我们的珠宝画廊',
-    },
     id: {
-      jewelryTitle: 'Galeri Perhiasan Kami',
+      jewelryTitle: 'Galeri Perjalanan Kami',
     },
-    jp: {
-      jewelryTitle: '私たちのジュエリーギャラリー',
-    },
-    ko: {
-      jewelryTitle: '우리의 보석 갤러리',
+    zh: {
+      jewelryTitle: '我们的旅行画廊',
     },
   };
 
@@ -43,8 +37,8 @@ const HomeGallery = () => {
         <img src={two} alt="Jewelry 2" className={classImg} />
         <img src={three} alt="Jewelry 3" className={classImg} />
         <img src={four} alt="Jewelry 4" className={classImg} />
-        <img src={five} alt="Jewelry 6" className={classImg} />
-        <img src={six} alt="Jewelry 5" className={classImg} />
+        <img src={five} alt="Jewelry 5" className={classImg} />
+        <img src={six} alt="Jewelry 6" className={classImg} />
         <img src={seven} alt="Jewelry 7" className={classImg} />
         <img src={eight} alt="Jewelry 8" className={classImg} />
         <img src={nine} alt="Jewelry 9" className={classImg} />

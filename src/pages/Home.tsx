@@ -5,6 +5,7 @@ import HomeGallery from '../components/fragments/HomeGallery';
 import HomePackage from '../components/fragments/HomePackage';
 import HomeServices from '../components/fragments/HomeServices';
 import TourAndDestination from '../components/fragments/TourAndDestination';
+import Transportation from '../components/fragments/Transportation';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <HomeBali />
       <HomePackage />
       <HomeServices />
+      <Transportation />
       <TourAndDestination />
       <HomeGallery />
     </div>

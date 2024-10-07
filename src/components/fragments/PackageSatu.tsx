@@ -1,3 +1,5 @@
+import { useLanguage } from '../../hooks/UseLanguage';
+
 interface PackageOption {
   package: string;
   price: string;
@@ -14,13 +16,30 @@ interface PackageSatuProps {
 }
 
 const PackageSatu = ({ pkg }: PackageSatuProps) => {
+  const { language } = useLanguage();
+
+  const titleContent = {
+    en: {
+      regular: 'Regular Packages',
+      privat: 'Private Boat Packages',
+    },
+    id: {
+      regular: 'Paket Reguler',
+      privat: 'Paket Perahu Pribadi',
+    },
+    zh: {
+      regular: '常规套餐',
+      privat: '私人船只套餐',
+    },
+  };
+
   return (
     <section>
       <div className="max-w-[1200px] mx-auto mb-12">
         {/* Regular Packages Table */}
         {pkg.regular && (
           <div className="mb-6">
-            <h3 className="text-center text-xl font-bold mb-4">Regular Packages</h3>
+            <h3 className="text-center text-xl font-bold mb-4">{titleContent[language].regular}</h3>
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-300">
                 <thead>
@@ -45,7 +64,7 @@ const PackageSatu = ({ pkg }: PackageSatuProps) => {
         {/* Private Boat Packages Table */}
         {pkg.privat && (
           <div>
-            <h3 className="text-center text-xl font-bold mb-4">Private Boat Packages</h3>
+            <h3 className="text-center text-xl font-bold mb-4">{titleContent[language].privat}</h3>
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-300">
                 <thead>
