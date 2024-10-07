@@ -4,6 +4,8 @@ import Pa1 from '../img/kyp/hero1.jpg';
 import Pa2 from '../img/kyp/gal3.jpg';
 import Pa3 from '../img/kyp/gal6.jpg';
 import { useLanguage } from '../hooks/UseLanguage';
+import PackageSatu from './fragments/PackageSatu';
+import Package2 from './fragments/Package2';
 
 interface PackageDetail {
   title: string;
@@ -25,8 +27,9 @@ const PackageDetail = () => {
   const packageDetails: PackageDetails = {
     en: {
       1: {
-        title: 'Traditional Silver Class',
-        details: ['Including 1-7 gr silver (extra silver will be charged based on market value)', 'Duration: 2-3 hours', 'Including free flow water', 'Break time with snacks, coffee & tea'],
+        title: 'Dolphin Tour',
+        details: ['Dolphin Only', 'Dolphin + Swing', 'Dolphin + Swing' + 'Snorkling'],
+        price: ['Rp. 150.000/person', 'Rp. 250.000/person', 'Rp. 350.000/person'],
         images: [Pa1, Pa2, Pa3],
       },
       2: {
@@ -49,39 +52,7 @@ const PackageDetail = () => {
         <h1 className="text-4xl font-bold text-gray-800 mb-4">{pkg.title}</h1>
       </div>
 
-      {id === '2' ? (
-        <div className="bg-blue-100 p-8 rounded-lg shadow-md">
-          <h2 className="text-3xl font-bold text-gray-700 mb-4">Special Offer</h2>
-          <p className="text-lg text-gray-600 mb-4">Get a special discount on our Dummy Package!</p>
-          <ul className="list-disc pl-5 space-y-2 text-lg text-gray-700">
-            {pkg.details.map((detail: any, index: number) => (
-              <li key={index} className="text-center">
-                {detail}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : (
-        <div className="max-w-2xl mx-auto mb-12">
-          <ul className="list-disc pl-5 space-y-3 text-lg text-gray-700">
-            {pkg.details.map((detail: any, index: number) => (
-              <p key={index} className="text-center">
-                {detail}
-              </p>
-            ))}
-          </ul>
-          <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {pkg.images.map((image: any, index: number) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-lg">
-                <img src={image} alt={`Package image ${index + 1}`} className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105" />
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Image Gallery Section */}
-      <div>Package Detail for ID: {id}</div>
+      {id === '2' ? <Package2 pkg={pkg} /> : <PackageSatu pkg={pkg} />}
     </div>
   );
 };

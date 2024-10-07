@@ -5,9 +5,9 @@ const HomeBali = () => {
 
   const content = {
     en: {
-      title: 'Why Jewelry Making in Bali?',
+      title: 'Why Visit Bali?',
       description:
-        'Express your creativity and have an authentic Indonesian cultural experience through the art of jewelry making. We offer a new experience for making silver jewelry using manual techniques. It is a wonderful activity to do with your family and friends, and you can bring a beautiful reminder of your time in Bali with you to treasure forever.',
+        "Experience the enchanting beauty and vibrant culture of Bali, a tropical paradise that offers something for everyone. From stunning beaches and lush rice terraces to rich traditions and delicious cuisine, Bali is a destination that captivates the senses. Whether you're seeking adventure, relaxation, or a deeper connection with nature and spirituality, Bali has it all. Enjoy unique experiences like traditional Balinese ceremonies, explore vibrant local markets, or indulge in rejuvenating spa treatments. A holiday in Bali promises unforgettable memories and a chance to embrace the island's warm hospitality, making it a must-visit destination for travelers.",
     },
     zh: {
       title: '为什么在巴厘岛制作珠宝？',

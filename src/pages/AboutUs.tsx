@@ -8,7 +8,7 @@ const AboutUs = () => {
     en: {
       title: 'About Us',
       description:
-        'Sri Rahayu Silver (Silver Class and Jewelry) offers a traditional and unique experience. By spending a few hours at our local silver smith classes, you will gain wonderful insight into traditional silver making, transforming raw materials into beautiful jewelry. Every element of our jewelry is crafted by hand, using traditional techniques. We also have a showroom displaying many of our handcrafted products.',
+        'KYP BALI TRANS is a transportation service based in North Bali, specifically in Lovina. We offer a variety of services, including North Bali tours, hotel transfers, and dolphin tours. Enjoy the comfort of your journey and vacation in North Bali with us.',
     },
     zh: {
       title: '关于我们',
@@ -18,7 +18,7 @@ const AboutUs = () => {
     id: {
       title: 'Tentang Kami',
       description:
-        'Sri Rahayu Silver (Kelas Perak dan Perhiasan) menawarkan pengalaman yang tradisional dan unik. Dengan menghabiskan beberapa jam di kelas perak lokal kami, Anda akan mendapatkan wawasan yang luar biasa tentang pembuatan perak tradisional, mengubah bahan mentah menjadi perhiasan yang indah. Setiap elemen perhiasan kami dibuat dengan tangan, menggunakan teknik tradisional. Kami juga memiliki showroom yang menampilkan banyak produk handmade kami.',
+        'KYP BALI TRANS is a transportation service based in North Bali, specifically in Lovina. We offer a variety of services, including North Bali tours, hotel transfers, and dolphin tours. Enjoy the comfort of your journey and vacation in North Bali with us.',
     },
     jp: {
       title: '私たちについて',
