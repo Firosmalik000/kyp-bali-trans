@@ -1,17 +1,75 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-const PackageSatu = ({ pkg }: any) => {
+interface PackageOption {
+  package: string;
+  price: string;
+}
+
+interface PackageDetail {
+  regular?: PackageOption[];
+  privat?: PackageOption[];
+  images: string[];
+}
+
+interface PackageSatuProps {
+  pkg: PackageDetail;
+}
+
+const PackageSatu = ({ pkg }: PackageSatuProps) => {
   return (
     <section>
-      <div className="max-w-2xl mx-auto mb-12">
-        <ul className="list-disc pl-5 space-y-3 text-lg text-gray-700">
-          {pkg.details.map((detail: any, index: number) => (
-            <p key={index} className="text-center">
-              {detail}
-            </p>
-          ))}
-        </ul>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {pkg.images.map((image: any, index: number) => (
+      <div className="max-w-[1200px] mx-auto mb-12">
+        {/* Regular Packages Table */}
+        {pkg.regular && (
+          <div className="mb-6">
+            <h3 className="text-center text-xl font-bold mb-4">Regular Packages</h3>
+            <div className="overflow-x-auto">
+              <table className="min-w-full bg-white border border-gray-300">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="py-2 px-4 border-b">Package</th>
+                    <th className="py-2 px-4 border-b">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {pkg.regular.map((option, index) => (
+                    <tr key={index} className="text-center">
+                      <td className="py-2 px-4 border-b">{option.package}</td>
+                      <td className="py-2 px-4 border-b">{option.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* Private Boat Packages Table */}
+        {pkg.privat && (
+          <div>
+            <h3 className="text-center text-xl font-bold mb-4">Private Boat Packages</h3>
+            <div className="overflow-x-auto">
+              <table className="min-w-full bg-white border border-gray-300">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="py-2 px-4 border-b">Package</th>
+                    <th className="py-2 px-4 border-b">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {pkg.privat.map((option, index) => (
+                    <tr key={index} className="text-center">
+                      <td className="py-2 px-4 border-b">{option.package}</td>
+                      <td className="py-2 px-4 border-b">{option.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* Images Section */}
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+          {pkg.images.map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg shadow-lg">
               <img src={image} alt={`Package image ${index + 1}`} className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105" />
             </div>
