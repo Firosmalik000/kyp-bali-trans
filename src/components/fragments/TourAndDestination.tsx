@@ -4,7 +4,7 @@ import Pa2 from '../../img/kyp/hero5.jpg';
 import { useLanguage } from '../../hooks/UseLanguage';
 
 const HomePackage = () => {
-  const language = useLanguage(); // Pastikan untuk mendapatkan bahasa yang aktif
+  const { language } = useLanguage(); // Pastikan useLanguage mengembalikan objek yang benar
 
   const packages = [
     {
@@ -47,9 +47,9 @@ const HomePackage = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {packages.map((pkg) => (
           <div key={pkg.id} className="h-[320px] w-full border rounded-lg shadow-md overflow-hidden bg-white transform hover:scale-105 transition-transform duration-300">
-            <img src={pkg.imageSrc} alt={pkg.imageAlt[language]} className="h-[230px] w-full object-cover" />
+            <img src={pkg.imageSrc} alt={pkg.imageAlt[language as keyof typeof pkg.imageAlt]} className="h-[230px] w-full object-cover" />
             <div className="flex flex-col gap-2 px-4 py-2 border-t">
-              <p className="text-center font-semibold text-lg text-gray-700">{pkg.name[language]}</p>
+              <p className="text-center font-semibold text-lg text-gray-700">{pkg.name[language as keyof typeof pkg.name]}</p>
               <Link to={`/package/${pkg.id}`}>
                 <p className="text-center font-bold text-blue-500 hover:underline">Show Detail</p>
               </Link>
