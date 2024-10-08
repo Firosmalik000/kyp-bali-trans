@@ -24,18 +24,20 @@ const Transportation = () => {
   };
 
   return (
-    <section className="px-[50px] py-[50px] bg-gray-100">
-      <div className="mx-auto mb-12 text-center">
+    <section className="px-4 py-12 sm:px-10 lg:px-20 bg-gray-100">
+      <div className="mx-auto mb-8 text-center">
         <p className="text-4xl font-bold text-gray-800 mb-4">{content[language].title}</p>
-        <p className="text-lg text-gray-600">{content[language].description}</p>
+        <p className="text-sm sm:text-base lg:text-lg text-gray-600">{content[language].description}</p>
       </div>
-      <div className="flex gap-x-6 items-center justify-center">
-        <div className="rounded-lg p-4 text-center">
-          <img src={car1} className="w-[500px] h-auto mx-auto mb-2" alt={content[language].vehicles[0]} />
+      <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
+        {/* Vehicle 1 */}
+        <div className="rounded-lg p-4 text-center max-w-[350px] sm:max-w-[400px] lg:max-w-[500px]">
+          <img src={car1} className="w-full h-auto mx-auto mb-2" alt={content[language].vehicles[0]} />
           <p className="font-semibold text-lg">{content[language].vehicles[0]}</p>
         </div>
-        <div className="rounded-lg p-4 text-center">
-          <img src={car2} className="w-[500px] h-auto mx-auto mb-2" alt={content[language].vehicles[1]} />
+        {/* Vehicle 2 */}
+        <div className="rounded-lg p-4 text-center max-w-[350px] sm:max-w-[400px] lg:max-w-[500px]">
+          <img src={car2} className="w-full h-auto mx-auto mb-2" alt={content[language].vehicles[1]} />
           <p className="font-semibold text-lg">{content[language].vehicles[1]}</p>
         </div>
       </div>

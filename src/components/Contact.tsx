@@ -50,11 +50,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full py-5 px-8 md:px-[100px] flex flex-col md:flex-row bg-blue-400 justify-between gap-x-5">
+    <section id="contact" className="w-full py-5 px-8 md:px-[100px] flex flex-col md:flex-row bg-blue-600 justify-between gap-x-5">
       <div className="w-full md:w-1/2">
         {/* penutup */}
         <div className="py-8 border-b-2 my-5">
-          <p className="text-xl text-white text-center md:text-left font-semibold font-sans">KYP Bali Trans</p>
+          <p className="text-3xl  text-white text-center md:text-left font-extrabold font-sans">KYP Bali Trans</p>
         </div>
 
         {/* contact */}
@@ -63,10 +63,10 @@ const Contact = () => {
             <h1 className="text-xl text-white font-bold  font-sans mb-6">{content[language].title}</h1>
             <div className="max-w-lg flex flex-col gap-y-2 mb-8">
               <div className="flex justify-center md:justify-start">
-                <FaEnvelope className="mr-2 mt-1 text-yellow-400 " /> <p className="text-white">kypbalitrans@gmail.com</p>
+                <FaEnvelope className="mr-2 mt-1 text-white" /> <p className="text-white">kypbalitrans@gmail.com</p>
               </div>
               <div className="flex justify-center md:justify-start">
-                <FaPhone className="mr-2 text-green-600" /> <span className="text-white">+62-823-4033-2580</span>
+                <FaPhone className="mr-2 text-white" /> <span className="text-white">+62-823-4033-2580</span>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ const Contact = () => {
 "
                   className="hover:scale-110 transition duration-300"
                 >
-                  <FaInstagram className="text-xl text-pink-600" />
+                  <FaInstagram className="text-xl text-white" />
                 </a>
               </div>
             </div>
@@ -93,7 +93,7 @@ const Contact = () => {
         <div className="">
           <div className="py-8 my-5">
             <p className="text-xl font-semibold font-sans mb-3 text-center md:text-left text-white">{content[language].address}</p>
-            <p className="text-m text-center md:text-left text-white">Bongkasa Pertiwi, Abiansemal, Badung Regency, Bali 80352</p>
+            <p className="text-m text-center md:text-left text-white">Pantai lovina, kalibubuk, kabupaten buleleng, bali 81152</p>
           </div>
         </div>
       </div>

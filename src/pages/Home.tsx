@@ -6,6 +6,7 @@ import HomePackage from '../components/fragments/HomePackage';
 import HomeServices from '../components/fragments/HomeServices';
 import TourAndDestination from '../components/fragments/TourAndDestination';
 import Transportation from '../components/fragments/Transportation';
+import QrCode from '../components/fragments/QrCode';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Transportation />
       <TourAndDestination />
       <HomeGallery />
+      <QrCode />
     </div>
   );
 };
