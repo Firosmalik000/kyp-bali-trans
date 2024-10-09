@@ -51,14 +51,14 @@ const Navbar = () => {
 
   return (
     <div className={`fixed top-0 z-50 w-full transition-colors duration-300 ${isScrolled ? 'bg-blue-600 shadow-lg text-white' : 'bg-opacity-25 bg-black text-white'}`}>
-      <div className="container mx-auto flex items-center justify-between h-[100px] px-4 md:px-6 lg:px-8">
+      <div className="container mx-auto flex items-center justify-between h-[80px] px-4 md:px-6 lg:px-8">
         <div className="flex items-center gap-2">
-          <img src={LogImg} className="md:w-[300px] w-[200px] " alt="" />
+          <img src={LogImg} className="md:w-[220px] w-[160px]" alt="Logo" />
         </div>
 
         <div className="hidden lg:flex items-center gap-x-6">
           <div className="items-center gap-x-4">
-            <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
+            <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-3 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
               <option value="en">English</option>
               <option value="id">Indonesia</option>
               <option value="zh">中文</option>
@@ -86,8 +86,9 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Menu pada tampilan mobile */}
       <div
-        className={`lg:hidden fixed inset-0 bg-gray-700 text-white flex flex-col items-center justify-center pt-16 transition-all duration-300 ease-in-out transform ${
+        className={`lg:hidden fixed inset-0 bg-gray-800 bg-opacity-90 text-white flex flex-col items-center justify-center pt-16 transition-all duration-300 ease-in-out transform ${
           isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
         } pointer-events-auto`}
       >
@@ -110,8 +111,8 @@ const Navbar = () => {
           <Link to="/contact-us">
             <button onClick={() => setIsMenuOpen(false)}>{texts[language].contact_us}</button>
           </Link>
-          <div className="lg:hidden items-center gap-x-4">
-            <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-2 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
+          <div className="lg:hidden items-center gap-x-4 mt-4">
+            <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-3 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
               <option value="en">English</option>
               <option value="id">Indonesia</option>
               <option value="zh">中文</option>
