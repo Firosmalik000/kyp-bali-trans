@@ -78,7 +78,7 @@ const Tours = () => {
         attractions: ['蒙杜克瀑布', '红珊瑚瀑布', '拉布安克博瀑布', '梅兰廷瀑布'],
       },
       {
-        title: '项目 G',
+        title: '项目 6',
         attractions: ['Tamblingan 徒步旅行 & 双湖美景独木舟'],
       },
     ],

@@ -1,8 +1,18 @@
 import { FaPhoneAlt, FaEnvelope, FaInstagram } from 'react-icons/fa';
 import { useLanguage } from '../hooks/UseLanguage';
+// import QrCode from '../components/fragments/QrCode';
+import { IoLogoWechat } from 'react-icons/io5';
+import Qr from '../img/kyp/qr.jpg';
+import { useState } from 'react';
+import { IoScanSharp } from 'react-icons/io5';
 
 const ContactUs = () => {
   const { language } = useLanguage();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Fungsi untuk membuka dan menutup modal
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const content = {
     en: {
@@ -47,22 +57,33 @@ const ContactUs = () => {
         {/* Contact Details Section */}
         <div className="flex flex-col gap-4 w-full max-w-md px-6 ">
           <div className="flex items-center text-lg font-medium justify-center md:justify-start">
-            <FaPhoneAlt className="text-gray-700 mr-2" />
+            <FaPhoneAlt className="text-gray-700 mr-2 text-2xl" />
             <p className="text-gray-700">+62-823-4033-2580</p>
           </div>
           <div className="flex items-center text-lg font-medium justify-center md:justify-start">
-            <FaEnvelope className="text-gray-700 mr-2" />
+            <FaEnvelope className="text-gray-700 mr-2 text-2xl" />
             <p className="text-gray-700">kypbalitrans@gmail.com</p>
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex items-center text-lg font-medium justify-center md:justify-start">
-              <FaInstagram className="text-gray-700 mr-2" />
+              <FaInstagram className="text-gray-700 mr-2 text-2xl" />
               <p className="text-gray-700">@kyp.bali_trans</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center text-lg font-medium justify-center md:justify-start">
+              <IoLogoWechat className="text-gray-700 mr-2 text-2xl" />
+              <div className="group">
+                <button onClick={openModal} className="w-[250px] border rounded-xl bg-gray-100 hover:bg-gray-600 group-hover:text-white font-semibold h-10 flex items-center justify-center shadow-md transition-all">
+                  <IoScanSharp className="text-gray-700 mr-2 group-hover:text-white" /> QR Barcode
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+      {/* qr section */}
+      {/* <QrCode /> */}
       {/* Map Section */}
       <div className="mt-10 px-4 md:px-20 lg:px-40 xl:px-60 rounded-xl mb-6">
         <iframe
@@ -74,6 +95,16 @@ const ContactUs = () => {
         ></iframe>
       </div>
       {/* Map Section */}
+      {/* {isModalOpen && ( */}
+      <div className={`fixed inset-0 bg-black/60 z-[10000] flex justify-center items-center transition-opacity duration-300 ease-in-out ${isModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        <div className="absolute inset-0" onClick={closeModal}></div>
+        <div className={`relative bg-white p-4 rounded-lg z-[10001] transform transition-transform duration-300 ease-in-out ${isModalOpen ? 'scale-100' : 'scale-90'}`}>
+          <img src={Qr} alt="QR Code" className="w-[300px] h-[300px]" />
+          <p className="text-center font-semibold font-sans text-2xl">Scan Me</p>
+        </div>
+      </div>
+
+      {/* )} */}
     </>
   );
 };
