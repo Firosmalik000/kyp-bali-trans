@@ -3,6 +3,7 @@ import { FaTimes } from 'react-icons/fa';
 import { IoMenuSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../hooks/UseLanguage';
+import LogImg from '../../img/kyp/lognav.png';
 
 // Hanya tiga pilihan bahasa: English (en), Chinese (zh), dan Indonesian (id)
 type LanguageType = 'en' | 'id' | 'zh';
@@ -49,10 +50,10 @@ const Navbar = () => {
   const classOptionNav = 'cursor-pointer font-semibold';
 
   return (
-    <div className={`fixed top-0 z-50 w-full transition-colors duration-300 ${isScrolled ? 'bg-white shadow-lg text-black' : 'bg-opacity-25 bg-black text-white'}`}>
+    <div className={`fixed top-0 z-50 w-full transition-colors duration-300 ${isScrolled ? 'bg-blue-600 shadow-lg text-white' : 'bg-opacity-25 bg-black text-white'}`}>
       <div className="container mx-auto flex items-center justify-between h-[100px] px-4 md:px-6 lg:px-8">
         <div className="flex items-center gap-2">
-          <p className="text-xl md:text-3xl font-bold font-sans">KYP Bali Trans</p>
+          <img src={LogImg} className="md:w-[300px] w-[200px] " alt="" />
         </div>
 
         <div className="hidden lg:flex items-center gap-x-6">
@@ -78,14 +79,6 @@ const Navbar = () => {
           <Link to="/contact-us">
             <div className={classOptionNav}>{texts[language].contact_us}</div>
           </Link>
-        </div>
-
-        <div className="lg:hidden items-center gap-x-4">
-          <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-2 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
-            <option value="en">English</option>
-            <option value="id">Indonesia</option>
-            <option value="zh">中文</option>
-          </select>
         </div>
 
         <button className="lg:hidden text-2xl" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -117,6 +110,13 @@ const Navbar = () => {
           <Link to="/contact-us">
             <button onClick={() => setIsMenuOpen(false)}>{texts[language].contact_us}</button>
           </Link>
+          <div className="lg:hidden items-center gap-x-4">
+            <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-2 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
+              <option value="en">English</option>
+              <option value="id">Indonesia</option>
+              <option value="zh">中文</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>

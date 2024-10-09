@@ -54,7 +54,7 @@ const Contact = () => {
       <div className="w-full md:w-1/2">
         {/* penutup */}
         <div className="py-8 border-b-2 my-5">
-          <p className="text-3xl  text-white text-center md:text-left font-extrabold font-sans">KYP Bali Trans</p>
+          <p className="text-3xl md:text-5xl  text-white text-center md:text-left font-extrabold font-sans">KYP Bali Trans</p>
         </div>
 
         {/* contact */}

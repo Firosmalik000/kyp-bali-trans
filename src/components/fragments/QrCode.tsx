@@ -24,11 +24,11 @@ const QrCode = () => {
   };
 
   return (
-    <section className="relative w-full h-auto min-h-[600px] bg-cover bg-center px-4 sm:px-10 lg:px-[180px] py-12" style={{ backgroundImage: `url(${code1})` }}>
+    <section className="relative w-full h-auto h-[600px] bg-cover bg-center px-4 sm:px-10 lg:px-[180px] py-12" style={{ backgroundImage: `url(${code1})` }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="relative z-10 flex flex-col md:flex-row justify-center gap-8 md:gap-x-[50px] items-center h-full">
+      <div className="relative z-10 flex flex-col md:flex-row justify-center gap-8 md:gap-x-[50px] items-center  h-full">
         {/* Gambar QR Code dan Scan Me */}
         <div className="flex flex-col items-center justify-center h-full pt-10">
           <img src={code2} className="w-[180px] sm:w-[220px] md:w-[250px] rounded-xl mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300" alt="QR Code" />
