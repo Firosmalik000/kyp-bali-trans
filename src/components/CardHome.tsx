@@ -6,7 +6,7 @@ interface CardProps {
 
 const CardHome = ({ title, description, icon }: CardProps) => {
   return (
-    <div className="w-[400px] h-[500px] rounded-[20px] shadow-xl hover:scale-105 duration-300 transtion ">
+    <div className="md:w-[400px] w-[300px] md:h-[500px] h-[450px] rounded-[20px] shadow-xl hover:scale-105 duration-300 transtion ">
       <div className="py-[90px] px-[20px]">
         <div className="text-center gap-y-5">
           <p className="w-full flex items-center justify-center text-3xl font-sans font-semibold">{title}</p>
