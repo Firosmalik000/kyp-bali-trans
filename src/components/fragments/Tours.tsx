@@ -26,7 +26,7 @@ const Tours = () => {
         attractions: ['Munduk Waterfall', 'Red Coral Waterfall', 'Labuan Kebo Waterfall', 'Melanting Waterfall'],
       },
       {
-        title: 'PROGRAM G',
+        title: 'PROGRAM 6',
         attractions: ['Tamblingan Trekking & Canoe Twin Lake View'],
       },
     ],
@@ -52,7 +52,7 @@ const Tours = () => {
         attractions: ['Air Terjun Munduk', 'Air Terjun Red Coral', 'Air Terjun Labuan Kebo', 'Air Terjun Melanting'],
       },
       {
-        title: 'PROGRAM G',
+        title: 'PROGRAM 6',
         attractions: ['Trekking Tamblingan & Danau Kembar'],
       },
     ],
